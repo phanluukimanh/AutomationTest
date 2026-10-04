@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'org.example' // (Có thể giữ nguyên group và version của bạn)
+group = 'org.example' 
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -10,18 +10,14 @@ repositories {
 }
 
 dependencies {
-    // Thư viện Selenium
     implementation 'org.seleniumhq.selenium:selenium-java:4.18.1'
 
-    // Thư viện JUnit 5
     testImplementation platform('org.junit:junit-bom:5.10.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
-    // ĐÂY LÀ DÒNG BẠN ĐANG THIẾU ĐỂ SỬA LỖI:
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 test {
-    // Chỉ định cho Gradle sử dụng nền tảng JUnit 5 để chạy test
     useJUnitPlatform()
 }
